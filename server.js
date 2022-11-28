@@ -1,11 +1,11 @@
 const express = require("express")
 const app = express()
 const cors = require("cors")
-const dotenv = require("dotenv")
-dotenv.config()
+const env = require("dotenv")
+env.config()
 const userService = require("./user-service.js")
 var jwt_obj = {
-  secretOrKey: process.dotenv.JWT_SECRET,
+  secretOrKey: process.env.JWT_SECRET,
   jwtFromRequest: passportJWT.ExtractJwt.fromAuthHeaderWithScheme("jwt"),
 }
 
